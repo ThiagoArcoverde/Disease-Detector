@@ -14,7 +14,7 @@ namespace DiseaseDetector.Controllers
             _context = context;
         }
 
-        [HttpGet(Name = "GetSymptoms")]
+        [HttpGet]
         public async Task<IActionResult> GetSymptoms()
         {
             var diseases = await _context.Symptoms.ToListAsync();

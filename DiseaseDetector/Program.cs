@@ -1,8 +1,6 @@
 using DiseaseDetector.Handler;
 using DiseaseDetector.Interfaces;
-using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.EntityFrameworkCore;
-using SQLitePCL;
 
 namespace DiseaseDetector
 {
@@ -27,7 +25,7 @@ namespace DiseaseDetector
                 var services = scope.ServiceProvider;
                 var startupService = services.GetRequiredService<IStartupService>();
                 string datasetPath = "Dataset" + "/" + "Diseases.csv";
-                startupService.SetupDatabase(datasetPath);
+                 startupService.SetupDatabase(datasetPath);
             }
 
             // Configure the HTTP request pipeline.
